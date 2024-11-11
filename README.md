@@ -8,21 +8,21 @@ Create derive presets inside a proc-macro crate - with generated docs attached t
 
 ## Inside a Proc-Macro Crate:
 ```rust
-    derive_preset::create!{
-        hashable "PartialEq,Eq,Hash,Clone,Debug"
-        serde "Serialize,Deserialize,Clone"
-    }
+derive_preset::create!{
+    hashable "PartialEq,Eq,Hash,Clone,Debug"
+    serde "Serialize,Deserialize,Clone"
+}
 ```
 
 ## Use it in another Crate:
 ```rust
-    use my_proc_crate::*;
+use my_proc_crate::*;
 
-    #[hashable(Clone,Default)]
-    struct Id(u32);
+#[hashable(Clone,Default)]
+struct Id(u32);
 
-    #[serde(Debug)]
-    struct Data(f32);
+#[serde(Debug)]
+struct Data(f32);
 ```
 
 ---
