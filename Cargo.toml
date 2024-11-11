@@ -1,0 +1,13 @@
+[package]
+name = "derive_preset"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+authors = ["Dekirisu <dekirisu@gmail.com>"]
+description = "Create presets, e.g. #[hash(Default)] for #[derive(PartialEq,Eq,Hash, Default)]"
+keywords = ["macro","derive","utility","proc"]
+
+[dependencies]
+proc-macro2 = "1.0"
+quote = "1.0"
